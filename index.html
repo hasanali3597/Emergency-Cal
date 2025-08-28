@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Cal</title>
+    <!-- font awsome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- daisyui cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <!-- tailwind cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+
+    <!-- heder -->
+
+    <!-- left -->
+
+    <section class=" flex justify-between p-5 items-center">
+        <div class="flex px-2 sm:px-5  gap-3 items-center">
+            <img class="w-10" src="./img/logo.png" alt="">
+            <h2 class="text-[#006747] font-bold text-[22px]">Emergency <br> Service</h2>
+        </div>
+        <!-- right  -->
+        <div class="flex gap-5 ">
+            <div class=" items-center  py-2 sm:px-5 bg-[#41ff6b1a] h-10 w-20 rounded-full flex gap-1">
+                <span id="heard-count" class="font-bold">0</span>
+                <img class="w-6 h-6" src="./img/heart.png" alt="">
+            </div>
+
+            <div class="flex px-2  sm:px-5 py-2 bg-[#41ff6b1a] rounded-full  gap-1 h-10 w-25">
+                <span id="cone-count" class="font-bold">100</span>
+                <figure>
+                    <img class="w-6 h-6 " src="./img/coin.png" alt="">
+                </figure>
+            </div>
+
+            <div class="px-2 py-1 bg-[#00a63e] rounded-full text-white h-10 w-20 text-center ">
+                <p class="text"><span id="copy-count">0</span> copy</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- baner container -->
+
+    <div class=" text-center p-4 bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223]">
+        <img class=" mx-auto w-[200px]" src="./img/logo-dark.png" alt="">
+        <h1 class="text-white text-4xl font-bold my-3">Emergency Service Directory</h1>
+        <p class="text-white">Government Emergency Services at Your Fingertip – A Project by Government of the People’s
+            Republic of Bangladesh</p>
+    </div>
+    <!-- main -->
+
+
+    <div class=" grid xl:grid-cols-[70%_30%]  md:px-20 mx-auto gap-5">
+
+        <!-- card container  -->
+        <div class=" px-15 sm:px-3 sm:grid-cols-2 xl:grid-cols-3  mt-10 p-5 grid gap-5 ">
+
+            <div class=" p-5   bg-[#ffffff] shadow-2xl rounded-md">
+                <div class="flex justify-between items-center">
+
+                    <div class="w-[38px] bg-[#ffe3e2] py-[10px] rounded-[10px]">
+                        <img class="w-[20px] mx-auto" src="./img/emergency.png" alt="">
+                    </div>
+
+                    <i class="fa-regular fa-heart heard-btn"></i>
+                </div>
+
+                <h2 id="emergencyName" class="text-[20px] font-semibold">National Emergency Number </h2>
+                <p class="text-gray-500">National Emergency</p>
+                <br>
+                <h1 id="titleNum" class="text-3xl font-bold">999</h1>
+                <p class="w-[50px] bg-gray-200 p-2 text-center rounded-full text-gray-500 my-1">All</p>
+
+                <div>
+                    <button id="emergencyNumber" class="btn   hover:bg-gray-200 text-gray-500 px-10 mr-4 copyQuery"> <i
+                            class="fa-regular fa-copy "></i> Copy</button>
+
+
+                    <button id="emergencyCall"
+                        class="btn bg-[#00a63e] text-white hover:bg-[#FFF59D] hover:text-[#00a63e] hover:border-[#00a63e]  px-11 my-3 ">
+                        <i class="fa-solid fa-phone"></i>Call</button>
+                </div>
+
+            </div>
+
+            <div class="  p-5   bg-[#ffffff] shadow-2xl rounded-md">
+                <div class="flex justify-between">
+
+                    <div class="w-[38px] bg-[#dfefff] py-[10px] rounded-[10px]">
+                        <img class="w-[20px] mx-auto" src="./img/police.png" alt="">
+                    </div>
+
+                    <i class="fa-regular fa-heart heard-btn heard-btn"></i>
+                </div>
+
+                <h2 id="pliceName" class="text-[20px] font-semibold">Police Helpline Number </h2>
+                <p class="text-gray-500">Police</p>
+                <h1 class="text-3xl font-bold">999</h1>
+                <p class="w-[60px] bg-gray-200 p-2 text-center rounded-full text-gray-500   my-1">Police</p>
+
+                <div>
+                    <button id="policeHepline" class="btn  hover:bg-gray-200 text-gray-500 px-10 mr-4 copyQuery"> <i
+                            class="fa-regular fa-copy"></i> Copy</button>
+
+                    <button id="policeCall"
+                        class="btn bg-[#00a63e] text-white hover:bg-[#FFF59D] hover:text-[#00a63e] hover:border-[#00a63e]  px-11 my-3 emergencyCall">
+                        <i class="fa-solid fa-phone"></i>Call</button>
+                </div>
+
+            </div>
+
+            <div class="  p-5   bg-[#ffffff] shadow-2xl rounded-md">
+                <div class="flex justify-between">
+
+                    <div class="w-[38px] bg-[#ffe3e2] py-[10px] rounded-[10px]">
+                        <img class="w-[20px] mx-auto" src="./img/fire-service.png" alt="">
+                    </div>
+
+                    <i class="fa-regular fa-heart heard-btn"></i>
+                </div>
+
+                <h2 id="fireName" class="text-[20px] font-semibold"> Fire Service Number </h2>
+                <p class="text-gray-500"> Fire Service</p>
+                <h1 class="text-3xl font-bold">999</h1>
+                <p class="w-[50px] bg-gray-200 p-2 text-center rounded-full text-gray-500 my-1">Fire</p>
+
+                <div>
+                    <button id="fireServie" class="btn   hover:bg-gray-200 text-gray-500 px-10 mr-4 copyQuery"> <i
+                            class="fa-regular fa-copy"></i> Copy</button>
+                    <button id="fireCallBtn"
+                        class="btn bg-[#00a63e] text-white hover:bg-[#FFF59D] hover:text-[#00a63e] hover:border-[#00a63e]  px-11 my-3 emergencyCall">
+                        <i class="fa-solid fa-phone"></i>Call</button>
+                </div>
+
+            </div>
+
+            <div class="  p-5   bg-[#ffffff] shadow-2xl rounded-md">
+                <div class="flex justify-between">
+
+                    <div class="w-[38px] bg-[#ffe3e2] py-[10px] rounded-[10px]">
+                        <img class="w-[20px] mx-auto" src="./img/ambulance.png" alt="">
+                    </div>
+
+                    <i class="fa-regular fa-heart heard-btn"></i>
+                </div>
+
+                <h2 id="ambulanceName" class="text-[20px] font-semibold">Ambulance Service</h2>
+                <p class="text-gray-500">
+                    Ambulance
+                </p>
+                <h1 id="ambulanceNum" class="text-3xl font-bold">1994-999999</h1>
+                <p class="w-[65px] bg-gray-200 p-2 text-center rounded-full text-gray-500 my-1">Health</p>
+
+                <div>
+                    <button id="ambulanceService" class="btn   hover:bg-gray-200 text-gray-500 px-10 mr-4 copyQuery"> <i
+                            class="fa-regular fa-copy"></i> Copy</button>
+
+                    <button id="ambulanceCallBtn"
+                        class="btn bg-[#00a63e] text-white hover:bg-[#FFF59D] hover:text-[#00a63e] hover:border-[#00a63e]  px-11 my-3 emergencyCall">
+                        <i class="fa-solid fa-phone"></i>Call</button>
+                </div>
+
+            </div>
+
+            <div class="  p-5   bg-[#ffffff] shadow-2xl rounded-md">
+                <div class="flex justify-between">
+
+                    <div class="w-[38px] bg-[#ffe3e2] py-[10px] rounded-[10px]">
+                        <img class="w-[20px] mx-auto" src="./img/emergency.png" alt="">
+                    </div>
+
+                    <i class="fa-regular fa-heart heard-btn"></i>
+                </div>
+
+                <h2 id="womenName" class="text-[20px] font-semibold">Women &amp; Child Helpline</h2>
+                <p class="text-gray-500">Women &amp; Child Helpline</p>
+                <h1 id="womenNum" class="text-3xl font-bold">109</h1>
+                <p class="w-[50px] bg-gray-200 p-2 text-center rounded-full text-gray-500 my-1">help</p>
+
+                <div>
+                    <button id="womenChild" class="btn   hover:bg-gray-200 text-gray-500 px-10 mr-4 copyQuery"> <i
+                            class="fa-regular fa-copy"></i> Copy</button>
+                    <button id="womenCall"
+                        class="btn bg-[#00a63e] text-white hover:bg-[#FFF59D] hover:text-[#00a63e] hover:border-[#00a63e]  px-11 my-3 emergencyCall">
+                        <i class="fa-solid fa-phone"></i>Call</button>
+                </div>
+
+            </div>
+            <div class="  p-5   bg-[#ffffff] shadow-2xl rounded-md">
+                <div class="flex justify-between">
+
+                    <div class="w-[38px] bg-[#ffe3e2] py-[10px] rounded-[10px]">
+                        <img class="w-[20px] mx-auto" src="./img/emergency.png" alt="">
+                    </div>
+
+                    <i class="fa-regular fa-heart heard-btn"></i>
+                </div>
+
+                <h2 id="antiNam" class="text-[20px] font-semibold">Anti-Corruption Helpline</h2>
+                <p class="text-gray-500">Anti-Corruption</p>
+                <h1 id="antiNum" class="text-3xl font-bold">106</h1>
+                <p class="w-[50px] bg-gray-200 p-2 text-center rounded-full text-gray-500 my-1"> Govt.</p>
+
+                <div>
+                    <button id="antiHelp" class="btn   hover:bg-gray-200 text-gray-500 px-10 mr-4 copyQuery"> <i
+                            class="fa-regular fa-copy"></i> Copy</button>
+                    <button id="antiCallBtn"
+                        class="btn bg-[#00a63e] text-white hover:bg-[#FFF59D] hover:text-[#00a63e] hover:border-[#00a63e]  px-11 my-3 emergencyCall">
+                        <i class="fa-solid fa-phone"></i>Call</button>
+                </div>
+
+            </div>
+            <div class="  p-5   bg-[#ffffff] shadow-2xl rounded-md">
+                <div class="flex justify-between">
+
+                    <div class="w-[38px] bg-[#ffe3e2] py-[10px] rounded-[10px]">
+                        <img class="w-[20px] mx-auto" src="./img/emergency.png" alt="">
+                    </div>
+
+                    <i class="fa-regular fa-heart heard-btn"></i>
+                </div>
+
+                <h2 id="electricity" class="text-[20px] font-semibold">Electricity Helpline</h2>
+                <p class="text-gray-500">Electricity Outage/p&gt;
+                </p>
+                <h1 id="electricityNum" class="text-3xl font-bold">16216</h1>
+                <p class="w-[90px] bg-gray-200 p-2 text-center rounded-full text-gray-500 my-1 ">Electricity</p>
+
+                <div>
+                    <button id="electricityHelp" class="btn   hover:bg-gray-200 text-gray-500 px-10 mr-4 copyQuery"> <i
+                            class="fa-regular fa-copy"></i> Copy</button>
+                    <button id="electricitybtn"
+                        class="btn bg-[#00a63e] text-white hover:bg-[#FFF59D] hover:text-[#00a63e] hover:border-[#00a63e]  px-11 my-3 emergencyCall">
+                        <i class="fa-solid fa-phone"></i>Call</button>
+                </div>
+
+            </div>
+            <div class="  p-5   bg-[#ffffff] shadow-2xl rounded-md">
+                <div class="flex justify-between">
+
+                    <div class="w-[38px] bg-[#ffe3e2] py-[10px] rounded-[10px]">
+                        <img class="w-[20px] mx-auto" src="./img/emergency.png" alt="">
+                    </div>
+
+                    <i class="fa-regular fa-heart heard-btn"></i>
+                </div>
+
+                <h2 id="bracNam" class="text-[20px] font-semibold">Brac Helpline</h2>
+                <p class="text-gray-500">Brac</p>
+                <h1 id="bracNum" class="text-3xl font-bold">16445</h1>
+                <p class="w-[50px] bg-gray-200 p-2 text-center rounded-full text-gray-500 my-1">NGO</p>
+
+                <div>
+                    <button id="bracHelping" class="btn   hover:bg-gray-200 text-gray-500 px-10 mr-4 copyQuery"> <i
+                            class="fa-regular fa-copy"></i> Copy</button>
+                    <button id="bracCallBtn"
+                        class="btn bg-[#00a63e] text-white hover:bg-[#FFF59D] hover:text-[#00a63e] hover:border-[#00a63e]  px-11 my-3 emergencyCall">
+                        <i class="fa-solid fa-phone"></i>Call</button>
+                </div>
+
+            </div>
+            <div class="  p-5   bg-[#ffffff] shadow-2xl rounded-md">
+                <div class="flex justify-between">
+
+                    <div class="w-[38px] bg-[#ffe3e2] py-[10px] rounded-[10px]">
+                        <img class="w-[20px] mx-auto" src="./img/emergency.png" alt="">
+                    </div>
+
+                    <i class="fa-regular fa-heart heard-btn"></i>
+                </div>
+
+                <h2 id="railwayNum" class="text-[20px] font-semibold">Bangladesh Railway Helpline </h2>
+                <p class="text-gray-500">Bangladesh Railway</p>
+                <h1 id="railwayNum" class="text-3xl font-bold">163</h1>
+                <p class="w-[65px] bg-gray-200 p-2 text-center rounded-full text-gray-500 my-1">Travel</p>
+
+                <div>
+                    <button id="railwayBD" class="btn   hover:bg-gray-200 text-gray-500 px-10 mr-4 copyQuery"> <i
+                            class="fa-regular fa-copy"></i> Copy</button>
+                    <button id="railwayCallBtn"
+                        class="btn bg-[#00a63e] text-white hover:bg-[#FFF59D] hover:text-[#00a63e] hover:border-[#00a63e]  px-11 my-3 emergencyCall">
+                        <i class="fa-solid fa-phone"></i>Call</button>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <!-- Call History container  -->
+        <div class=" mt-16  p-5   bg-[#ffffff] shadow-2xl rounded-md">
+
+            <div class="flex justify-between items-center mb-5">
+                <h1 class="text-[24px] font-bold"><i class="fa-regular fa-clock mr-2"></i>Call History</h1>
+
+                <button id="clearBtn" class="btn bg-[#00a63e] rounded-4xl text-white"> Clear</button>
+            </div>
+
+            <!-- call history input container -->
+            <div id="history-continer">
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    <script src="./hasan.js"></script>
+</body>
+
+</html>
